@@ -3,4 +3,4 @@
 
 select *
 from {{ ref('customer') }}
-where id = 1
+where C_CUSTKEY = 1

@@ -11,9 +11,9 @@
 
 with CUSTOMER as (
 
-    select 1 as id
+    select 1 as C_CUSTKEY
     union all
-    select null as id
+    select null as C_CUSTKEY
 
 )
 
