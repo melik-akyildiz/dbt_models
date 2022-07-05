@@ -17,8 +17,8 @@ with CUSTOMER as (
 
 )
 
-select *
-from CUSTOMER
+select C_CUSTKEY
+from CUSTOMER where C_CUSTKEY=11
 
 /*
     Uncomment the line below to remove records with null `id` values
