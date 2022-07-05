@@ -9,7 +9,7 @@
 
 {{ config(materialized='table') }}
 
-with CUSTOMER as (
+with MELIK_CUSTOMER as (
 
     select 11 as C_CUSTKEY
     union all
@@ -18,7 +18,7 @@ with CUSTOMER as (
 )
 
 select *
-from CUSTOMER where C_CUSTKEY=11
+from MELIK_CUSTOMER where C_CUSTKEY=11
 
 /*
     Uncomment the line below to remove records with null `id` values
