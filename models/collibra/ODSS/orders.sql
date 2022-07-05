@@ -3,4 +3,4 @@
 
 select *
 from ORDERS
-where 0_CUSTKEY = {{ ref('customer') }}
+where O_CUSTKEY = {{ ref('customer') }}
