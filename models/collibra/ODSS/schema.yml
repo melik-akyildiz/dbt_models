@@ -11,7 +11,7 @@ models:
                 - unique
                 - not_null
 
-    - name: second_model
+    - name: orders
       description: "A starter dbt model"
       columns:
           - name: C_CUSTKEY
