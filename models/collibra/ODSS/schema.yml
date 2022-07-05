@@ -18,11 +18,3 @@ models:
             description: "The primary key for this table"
             tests:
                 - not_null
-
-    - name: customers
-      description: "A starter dbt model"
-      columns:
-          - name: O_CUSTKEY
-            description: "The primary key for this table"
-            tests:
-              - not_null
