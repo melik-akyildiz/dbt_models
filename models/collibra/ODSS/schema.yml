@@ -14,7 +14,7 @@ models:
     - name: orders
       description: "A starter dbt model"
       columns:
-          - name: O_CUSTKEY
+          - name: C_CUSTKEY
             description: "The primary key for this table"
             tests:
                 - not_null
