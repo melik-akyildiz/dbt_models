@@ -18,7 +18,7 @@ with MELIK_CUSTOMER as (
 )
 
 select *
-from MELIK_CUSTOMER where C_CUSTKEY=11
+from MELIK_CUSTOMER where C_CUSTKEYERROR=11
 
 /*
     Uncomment the line below to remove records with null `id` values
