@@ -25,4 +25,4 @@ models:
           - name: C_CUSTKEY
             description: "The primary key for this table"
             tests:
-              - not_null
+
