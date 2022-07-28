@@ -18,3 +18,59 @@ models:
             description: "The primary key for this table"
             tests:
                 - not_null
+    - name: MELIK_ORDERS2
+        description: "A starter dbt model"
+        columns:
+          - name: C_CUSTKEY
+            description: "The primary key for this table"
+            tests:
+              - not_null
+    - name: MELIK_ORDERS3
+        description: "A starter dbt model"
+        columns:
+          - name: C_CUSTKEY
+            description: "The primary key for this table"
+            tests:
+              - not_null
+    - name: MELIK_ORDERS4
+        description: "A starter dbt model"
+        columns:
+          - name: C_CUSTKEY
+            description: "The primary key for this table"
+            tests:
+              - not_null
+    - name: MELIK_ORDERS5
+        description: "A starter dbt model"
+        columns:
+          - name: C_CUSTKEY
+            description: "The primary key for this table"
+            tests:
+              - not_null
+    - name: MELIK_ORDERS6
+        description: "A starter dbt model"
+        columns:
+          - name: C_CUSTKEY
+            description: "The primary key for this table"
+            tests:
+              - not_null
+    - name: MELIK_ORDERS7
+        description: "A starter dbt model"
+        columns:
+          - name: C_CUSTKEY
+            description: "The primary key for this table"
+            tests:
+              - not_null
+    - name: MELIK_ORDERS8
+        description: "A starter dbt model"
+        columns:
+          - name: C_CUSTKEY
+            description: "The primary key for this table"
+            tests:
+              - not_null
+    - name: MELIK_ORDERS9
+        description: "A starter dbt model"
+        columns:
+          - name: C_CUSTKEY
+            description: "The primary key for this table"
+            tests:
+              - not_null
