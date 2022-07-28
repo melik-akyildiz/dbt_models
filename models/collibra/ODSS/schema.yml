@@ -2,27 +2,75 @@
 version: 2
 
 models:
-    - name: MELIK_CUSTOMER
-      description: "A starter dbt model"
-      columns:
-          - name: C_CUSTKEY
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+  - name: MELIK_CUSTOMER
+    description: "A starter dbt model"
+    columns:
+      - name: C_CUSTKEY
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
 
-    - name: MELIK_ORDERS
-      description: "A starter dbt model"
-      columns:
-          - name: C_CUSTKEY
-            description: "The primary key for this table"
-            tests:
-                - not_null
+  - name: MELIK_ORDERS
+    description: "A starter dbt model"
+    columns:
+      - name: C_CUSTKEY
+        description: "The primary key for this table"
+        tests:
+          - not_null
 
-    - name: MELIK_ORDERS_TWO
-      description: "A starter dbt model"
-      columns:
-          - name: C_CUSTKEY
-            description: "The primary key for this table"
-            tests:
+  - name: MELIK_ORDERS_TWO
+    description: "A starter dbt model"
+    columns:
+      - name: C_CUSTKEY
+        description: "The primary key for this table"
+        tests:
 
+  - name: MELIK_ORDERS3
+    description: "A starter dbt model"
+    columns:
+      - name: C_CUSTKEY
+        description: "The primary key for this table"
+        tests:
+
+  - name: MELIK_ORDERS4
+    description: "A starter dbt model"
+    columns:
+      - name: C_CUSTKEY
+        description: "The primary key for this table"
+        tests:
+
+  - name: MELIK_ORDERS5
+    description: "A starter dbt model"
+    columns:
+      - name: C_CUSTKEY
+        description: "The primary key for this table"
+        tests:
+
+  - name: MELIK_ORDERS6
+    description: "A starter dbt model"
+    columns:
+      - name: C_CUSTKEY
+        description: "The primary key for this table"
+        tests:
+
+  - name: MELIK_ORDERS7
+    description: "A starter dbt model"
+    columns:
+      - name: C_CUSTKEY
+        description: "The primary key for this table"
+        tests:
+
+  - name: MELIK_ORDERS8
+    description: "A starter dbt model"
+    columns:
+      - name: C_CUSTKEY
+        description: "The primary key for this table"
+        tests:
+
+  - name: MELIK_ORDERS9
+    description: "A starter dbt model"
+    columns:
+      - name: C_CUSTKEY
+        description: "The primary key for this table"
+        tests:
