@@ -19,8 +19,8 @@ models:
                 - not_null
 
     - name: MELIK_ORDERS_TWO
-        description: "A starter dbt model"
-        columns:
+      description: "A starter dbt model"
+      columns:
           - name: C_CUSTKEY
             description: "The primary key for this table"
             tests:
