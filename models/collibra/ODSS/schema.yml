@@ -8,6 +8,7 @@ models:
           - name: C_CUSTKEY
             description: "The primary key for this table"
             tests:
+                - unique
                 - not_null
 
     - name: MELIK_ORDERS
@@ -25,4 +26,3 @@ models:
             description: "The primary key for this table"
             tests:
               - not_null
-
