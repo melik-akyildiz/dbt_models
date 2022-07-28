@@ -8,7 +8,6 @@ models:
           - name: C_CUSTKEY
             description: "The primary key for this table"
             tests:
-                - unique
                 - not_null
 
     - name: MELIK_ORDERS
@@ -19,7 +18,7 @@ models:
             tests:
                 - not_null
 
-    - name: MELIK_ORDERS2
+    - name: MELIK_ORDERS_TWO
         description: "A starter dbt model"
         columns:
           - name: C_CUSTKEY
