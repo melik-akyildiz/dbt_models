@@ -21,7 +21,7 @@ with MELIK_CUSTOMER_TWO_COLUMN as (
 )
 
 select *
-from MELIK_CUSTOMER_TWO_COLUMN where C_CUSTKEY=11,A_CUSTKEY=1
+from MELIK_CUSTOMER_TWO_COLUMN where C_CUSTKEY=11 and A_CUSTKEY=1
 
 /*
     Uncomment the line below to remove records with null `id` values
