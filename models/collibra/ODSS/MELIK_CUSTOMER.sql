@@ -13,12 +13,15 @@ with MELIK_CUSTOMER_TWO_COLUMN as (
 
     select 11 as C_CUSTKEY
     union all
-    select null as C_CUSTKEY
+    select null as C_CUSTKEY,
+    select 1 as A_CUSTKEY
+    union all
+    select null as A_CUSTKEY
 
 )
 
 select *
-from MELIK_CUSTOMER_TWO_COLUMN where C_CUSTKEY=11
+from MELIK_CUSTOMER_TWO_COLUMN where C_CUSTKEY=11,A_CUSTKEY=1
 
 /*
     Uncomment the line below to remove records with null `id` values
