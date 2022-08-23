@@ -2,7 +2,7 @@
 version: 2
 
 models:
-  - name: MELIK_CUSTOMER_TWO_COLUMN
+  - name: MELIK_CUSTOMER
     description: "A starter dbt model"
     columns:
       - name: C_CUSTKEY
