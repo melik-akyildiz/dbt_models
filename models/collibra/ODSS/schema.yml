@@ -84,7 +84,3 @@ sources:
     tables:
       - name: MELIK_CUSTOMER
       - name: MELIK_ORDERS
-
-  - name: test_source
-    tables:
-      - name: MELIK_CUSTOMER
