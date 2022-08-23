@@ -10,7 +10,6 @@ models:
         tests:
           - unique
           - not_null
-
       - name: A_CUSTKEY
         description: "Secondary Column"
         tests:
