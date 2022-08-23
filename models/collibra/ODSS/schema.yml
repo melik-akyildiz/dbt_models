@@ -79,3 +79,12 @@ models:
       - name: C_CUSTKEY
         description: "The primary key for this table"
         tests:
+sources:
+  - name: test_source
+    tables:
+      - name: MELIK_CUSTOMER
+      - name: MELIK_ORDERS
+
+  - name: test_source
+    tables:
+      - name: MELIK_CUSTOMER
