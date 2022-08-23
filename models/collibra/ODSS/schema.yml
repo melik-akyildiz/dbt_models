@@ -2,7 +2,7 @@
 version: 2
 
 models:
-  - name: MELIK_CUSTOMER
+  - name: MELIK_CUSTOMER_TWO_COLUMN
     description: "A starter dbt model"
     columns:
       - name: C_CUSTKEY
@@ -10,6 +10,11 @@ models:
         tests:
           - unique
           - not_null
+      - name: A_CUSTKEY
+          description: "Secondary Column"
+          tests:
+            - unique
+            - not_null
 
   - name: MELIK_ORDERS
     description: "A starter dbt model"
