@@ -15,6 +15,12 @@ models:
         tests:
           - unique
           - not_null
+      - name: order_date
+          description: date of the order
+      - name: priority_code
+          description: code associated with the order
+      - name: net_item_sales_amount
+          description: '{{ doc("net_item_sales_amount") }}'
 
   - name: DEPENDS_ON_EXAMPLE
     description: "second dbt model"
@@ -57,8 +63,8 @@ models:
           description: foreign key for customers
           tests:
             - relationships:
-                to: ref('dim_customers')
-                field: customer_key
+                to: ref('MAIN_EXAMPLE')
+                field: C_CUSTKEY
                 severity: error
         - name: order_date
           description: date of the order
@@ -80,6 +86,8 @@ models:
           description: '{{ doc("item_tax_amount") }}'
         - name: net_item_sales_amount
           description: '{{ doc("net_item_sales_amount") }}'
+        depends_on:
+          - ref('MAIN_EXAMPLE')
 sources:
   - name: test_source
     tables:
@@ -89,14 +97,17 @@ sources:
 metrics:
   - name: test_metrics
     label: metrics
-    model: ref('DEPENDS_ON_EXAMPLE')
+    model: ref('MELIK_CUSTOMER')
     description: "Total revenue from orders in the specified time period"
 
-    type: count
-    sql: C_CUSTKEY
+    type: sum
+    sql: net_item_sales_amount
 
-    dimensions:
-      - C_CUSTKEY
+    timestamp: order_date
+    time_grains: [ day, week, month, quarter, year ]
+
+  dimensions:
+    - priority_code
 
 exposures:
   - name: yearly_part_rollup
