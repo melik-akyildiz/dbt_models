@@ -67,7 +67,7 @@ sources:
 metrics:
   - name: test_metrics
     label: metrics
-    model: ref('MELIK_CUSTOMER')
+    model: ref('MAIN_EXAMPLE')
     description: "Total revenue from orders in the specified time period"
 
     type: sum
