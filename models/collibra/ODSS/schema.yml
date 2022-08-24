@@ -43,3 +43,19 @@ sources:
     tables:
       - name: MELIK_CUSTOMER
       - name: MELIK_ORDERS
+
+metrics:
+  - name: test_metrics
+    label: metrics
+    model: ref('DEPENDS_ON_EXAMPLE')
+    description: "Total revenue from orders in the specified time period"
+
+    type: sum
+    sql: net_item_sales_amount
+
+    timestamp: order_date
+    time_grains: [ day, week, month, quarter, year ]
+
+    dimensions:
+      - priority_code
+
