@@ -105,8 +105,8 @@ metrics:
     timestamp: order_date
     time_grains: [ day, week, month, quarter, year ]
 
-  dimensions:
-    - priority_code
+    dimensions:
+      - priority_code
 
 exposures:
   - name: yearly_part_rollup
