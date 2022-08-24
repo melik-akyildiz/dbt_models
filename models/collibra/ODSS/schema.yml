@@ -17,10 +17,16 @@ models:
           - not_null
       - name: order_date
         description: date of the order
+        tests:
+          - not_null
       - name: priority_code
         description: code associated with the order
+        tests:
+          - not_null
       - name: net_item_sales_amount
-        description: '{{ doc("net_item_sales_amount") }}'
+        description: 'net_item_sales_amount'
+        tests:
+          - not_null
 
   - name: DEPENDS_ON_EXAMPLE
     description: "second dbt model"
