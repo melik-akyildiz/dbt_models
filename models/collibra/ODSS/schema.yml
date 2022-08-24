@@ -3,7 +3,7 @@ version: 2
 
 models:
   - name: MAIN_EXAMPLE
-    description: "A starter dbt model"
+    description: "frist dbt model"
     columns:
       - name: C_CUSTKEY
         description: "The primary key for this table"
@@ -17,26 +17,33 @@ models:
           - not_null
 
   - name: DEPENDS_ON_EXAMPLE
-    description: "A starter dbt model"
+    description: "second dbt model"
     columns:
       - name: C_CUSTKEY
-        description: "The primary key for this table"
+        description: "secondary model for a column"
         tests:
           - not_null
 
   - name: SECOND_DEPENDS_ON_EXAMPLE
-    description: "A starter dbt model"
+    description: "third dbt model"
     columns:
       - name: C_CUSTKEY
-        description: "The primary key for this table"
+        description: "third model for a column"
         tests:
 
   - name: SOURCE_EXAMPLE
-    description: "A starter dbt model"
+    description: "source dbt model"
     columns:
       - name: C_CUSTKEY
-        description: "The primary key for this table"
+        description: "column for source"
         tests:
+
+  - name: NODES_DEPENDS_ON_EXAMPLE
+    description: "Node lineage test"
+      columns:
+        - name: C_CUSTKEY
+          description: "The primary key for this table"
+          tests:
 
 sources:
   - name: test_source
@@ -58,4 +65,35 @@ metrics:
 
     dimensions:
       - priority_code
+
+exposures:
+  - name: yearly_part_rollup
+    description: |
+      # Parts by year
+      ============
+
+      This dashboard allows us to look at the count of all the parts we have over time rolled up to a yearly cadence.
+
+      Its divided into:
+        * *small* parts
+        * `medium` parts
+        * **large** parts
+
+    # type could be {dashboard, notebook, analysis, ml, application}
+    type: dashboard
+
+    # this is just a link to the thing itself for click through from documentation
+    url: https://example.com
+
+    # convenience feature - relative scale of {high, medium, low}
+    maturity: high
+
+    # documentation purposes for point of contact if stuff breaks
+    owner:
+      name: dbt user Melik
+      email: dbtusermelik@getdbt.com
+
+    # IMPORTANT: determines the lineage relationship of the exposure construct to the rest of your DAG
+    depends_on:
+      - ref('MAIN_EXAMPLE')
 
