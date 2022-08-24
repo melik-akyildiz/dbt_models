@@ -40,10 +40,10 @@ models:
 
   - name: NODES_DEPENDS_ON_EXAMPLE
     description: "Node lineage test"
-      columns:
-        - name: C_CUSTKEY
-          description: "The primary key for this table"
-          tests:
+    columns:
+      - name: C_CUSTKEY
+        description: "The primary key for this table"
+        tests:
 
 sources:
   - name: test_source
