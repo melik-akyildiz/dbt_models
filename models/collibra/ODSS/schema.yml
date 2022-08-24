@@ -50,7 +50,7 @@ models:
       - name: C_CUSTKEY
         description: "The primary key for this table"
         tests:
-          -
+
   - name: ADVANCE_DEPENDS_ON_EXAMPLE
     description: orders fact table
     columns:
