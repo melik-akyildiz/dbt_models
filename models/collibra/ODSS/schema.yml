@@ -16,11 +16,11 @@ models:
           - unique
           - not_null
       - name: order_date
-          description: date of the order
+        description: date of the order
       - name: priority_code
-          description: code associated with the order
+        description: code associated with the order
       - name: net_item_sales_amount
-          description: '{{ doc("net_item_sales_amount") }}'
+        description: '{{ doc("net_item_sales_amount") }}'
 
   - name: DEPENDS_ON_EXAMPLE
     description: "second dbt model"
