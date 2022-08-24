@@ -57,14 +57,11 @@ metrics:
     model: ref('DEPENDS_ON_EXAMPLE')
     description: "Total revenue from orders in the specified time period"
 
-    type: sum
-    sql: net_item_sales_amount
-
-    timestamp: order_date
-    time_grains: [ day, week, month, quarter, year ]
+    type: count
+    sql: C_CUSTKEY
 
     dimensions:
-      - priority_code
+      - C_CUSTKEY
 
 exposures:
   - name: yearly_part_rollup
