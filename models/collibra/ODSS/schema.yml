@@ -2,7 +2,7 @@
 version: 2
 
 models:
-  - name: MELIK_CUSTOMER
+  - name: MAIN_EXAMPLE
     description: "A starter dbt model"
     columns:
       - name: C_CUSTKEY
@@ -16,7 +16,7 @@ models:
           - unique
           - not_null
 
-  - name: MELIK_ORDERS
+  - name: DEPENDS_ON_EXAMPLE
     description: "A starter dbt model"
     columns:
       - name: C_CUSTKEY
@@ -24,14 +24,14 @@ models:
         tests:
           - not_null
 
-  - name: MELIK_ORDERS_TWO
+  - name: SECOND_DEPENDS_ON_EXAMPLE
     description: "A starter dbt model"
     columns:
       - name: C_CUSTKEY
         description: "The primary key for this table"
         tests:
 
-  - name: MELIK_ORDERS3
+  - name: SOURCE_EXAMPLE
     description: "A starter dbt model"
     columns:
       - name: C_CUSTKEY
