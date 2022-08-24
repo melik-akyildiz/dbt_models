@@ -54,31 +54,9 @@ models:
   - name: ADVANCE_DEPENDS_ON_EXAMPLE
     description: orders fact table
     columns:
-        - name: order_key
-          description: primary key of the model
-          tests:
-
-        - name: customer_key
-          description: foreign key for customers
-          tests:
-            - relationships:
-                to: ref('MAIN_EXAMPLE')
-                field: C_CUSTKEY
-                severity: error
-        - name: order_date
-          description: date of the order
-        - name: status_code
-          description: status of the order
-        - name: priority_code
-          description: code associated with the order
-        - name: clerk_name
-          description: id of the clerk
-        - name: ship_priority
-          description: numeric representation of the shipping priority, zero being the default
-        - name: order_count
-          description: count of order
-        - name: net_item_sales_amount
-          description: 'net_item_sales_amount'
+     - name: C_CUSTKEY
+       description: "The primary key for this table"
+       tests:
 
 sources:
   - name: test_source
