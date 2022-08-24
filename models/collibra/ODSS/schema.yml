@@ -51,7 +51,7 @@ models:
         description: "The primary key for this table"
         tests:
           -
-  - name: fct_orders
+  - name: ADVANCE_DEPENDS_ON_EXAMPLE
     description: orders fact table
     columns:
         - name: order_key
@@ -86,8 +86,7 @@ models:
           description: '{{ doc("item_tax_amount") }}'
         - name: net_item_sales_amount
           description: '{{ doc("net_item_sales_amount") }}'
-        depends_on:
-          - ref('MAIN_EXAMPLE')
+
 sources:
   - name: test_source
     tables:
