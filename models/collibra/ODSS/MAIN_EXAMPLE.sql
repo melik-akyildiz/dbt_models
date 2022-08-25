@@ -9,23 +9,17 @@
 
 {{ config(materialized='table') }}
 
-with MELIK_CUSTOMER_TWO_COLUMN as (
+with MAIN_EXAMPLE as (
 
     select 11 as C_CUSTKEY
     union all
-    select null as C_CUSTKEY,
-    select 1 as A_CUSTKEY
-    union all
-    select null as A_CUSTKEY,
-    select 1 as  net_item_sales_amount
-    union all
-    select null as  net_item_sales_amount
+    select null as C_CUSTKEY
 
 
 )
 
 select *
-from MELIK_CUSTOMER_TWO_COLUMN where C_CUSTKEY=11 and A_CUSTKEY=1 and  net_item_sales_amount=1
+from MAIN_EXAMPLE where C_CUSTKEY=11
 
 /*
     Uncomment the line below to remove records with null `id` values
