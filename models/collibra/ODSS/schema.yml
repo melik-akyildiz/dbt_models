@@ -83,7 +83,7 @@ metrics:
     time_grains: [ day, week, month, quarter, year ]
 
     dimensions:
-      - priority_code
+      - C_CUSTKEY
 
 exposures:
   - name: yearly_part_rollup
