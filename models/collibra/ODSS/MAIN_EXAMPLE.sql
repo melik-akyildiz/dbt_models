@@ -22,10 +22,20 @@ with MAIN_EXAMPLE as (
 
 
 
+),
+final as (
+    select
+        C_CUSTKEY,
+        A_CUSTKEY,
+        order_date,
+        priority_code,
+        net_item_sales_amount,
+    from
+        MAIN_EXAMPLE
 )
 
 select *
-from MAIN_EXAMPLE
+from final
 
 /*
     Uncomment the line below to remove records with null `id` values
