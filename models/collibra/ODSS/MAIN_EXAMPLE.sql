@@ -11,15 +11,21 @@
 
 with MAIN_EXAMPLE as (
 
-    select 11 as C_CUSTKEY
-    union all
-    select null as C_CUSTKEY
+    select
+        C_CUSTKEY,
+        A_CUSTKEY,
+        order_date,
+        priority_code,
+        net_item_sales_amount,
+    from
+        MAIN_EXAMPLE
+
 
 
 )
 
 select *
-from MAIN_EXAMPLE where C_CUSTKEY=11
+from MAIN_EXAMPLE
 
 /*
     Uncomment the line below to remove records with null `id` values
